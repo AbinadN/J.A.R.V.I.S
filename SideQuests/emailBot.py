@@ -27,9 +27,7 @@ def get_info():
 
 # Manually Added Contact List
 email_list = {
-    'dude': 'jhankar@gmail.com',
-    'dad': 'nagatheeban@gmail.com',
-    'mom' : 'umaiyal2000@yahoo.com',
+    'dude': 'jhankar@gmail.com'
 
 
 }
@@ -37,9 +35,9 @@ email_list = {
 def send_email(receiver,subject,message):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
-    server.login('abinad.naga@gmail.com', '')
+    server.login('gmail', 'password')
     email = EmailMessage()
-    email['From'] = 'abinad.naga@gamil.com'
+    email['From'] = 'gmail'
     email['To'] = receiver
     email['Subject'] = subject
     email.set_content(message)
