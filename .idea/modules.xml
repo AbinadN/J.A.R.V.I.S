@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../THE PROJECT/ChatDev/.idea/ChatDev.iml" filepath="$PROJECT_DIR$/../THE PROJECT/ChatDev/.idea/ChatDev.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/J.A.R.V.I.S.iml" filepath="$PROJECT_DIR$/.idea/J.A.R.V.I.S.iml" />
     </modules>
   </component>

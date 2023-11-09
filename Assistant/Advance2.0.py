@@ -41,12 +41,13 @@ def takeCommand():
         print("Listening...")
         r.pause_threshold = 1
         audio = r.listen(source)
+
         try:
             print("Recognizing...")
             query = r.recognize_google(audio, language='en-in')
-            print(f"User said: {query}\n")
+            print(f"You said: {query}\n")
         except Exception as e:
-            print("Say that again please...")
+            print("Mind saying that again please...")
             return "None"
         return query
 
@@ -58,13 +59,14 @@ if __name__ == "__main__":
             speak('Searching Wikipedia...')
             query = query.replace("wikipedia", "")
             results = wikipedia.summary(query, sentences=2)
-            speak("According to Wikipedia")
+            speak("According to Wikipedia,")
             print(results)
             speak(results)
-        elif "channel analytics" in query:
-            webbrowser.open("https://studio.youtube.com/channel/UCxeYbp9rU_HuIwVcuHvK0pw/analytics/tab-overview/period-default")
         elif 'search on youtube' in query:
             query = query.replace("search on youtube", "")
             webbrowser.open(f"www.youtube.com/results?search_query={query}")
-        # Add more commands as needed
+        elif 'open youtube' in query:
+            speak("What would you like to play?")
+            query = takeCommand().lower()
+            kit.playonyt(f"{query}")
 
