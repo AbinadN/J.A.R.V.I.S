@@ -1,2 +1,2 @@
 # J.A.R.V.I.S
-My hobby python programming excercises!
+My hobby programming excercises on PyCharm!
